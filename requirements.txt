@@ -1,0 +1,23 @@
+# Core dependencies
+aiohttp>=3.8.0
+pydantic>=2.0.0
+structlog>=23.0.0
+click>=8.0.0
+rich>=13.0.0
+jsonschema>=4.0.0
+python-dotenv>=1.0.0
+
+# Optional: Persistent context
+redis>=4.0.0
+
+# Optional: Metrics
+prometheus-client>=0.15.0
+
+# Optional: Advanced sandboxing
+docker>=6.0.0
+
+# Development
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+mypy>=1.0.0
