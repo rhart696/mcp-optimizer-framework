@@ -1,0 +1,231 @@
+name: Bug Report
+description: Report a bug to help us improve
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Install version '...'
+        2. Configure '...'
+        3. Execute '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened instead
+      placeholder: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: minimal-example
+    attributes:
+      label: Minimal Reproducible Example
+      description: Provide a minimal code example that reproduces the issue
+      render: python
+      placeholder: |
+        from mcp_optimizer import CodeExecutor, FeatureFlags
+
+        flags = FeatureFlags(...)
+        executor = CodeExecutor(flags)
+        # ... code that triggers the bug
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: Paste any error messages, stack traces, or logs
+      render: shell
+      placeholder: Paste error messages and stack traces here
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you using?
+      placeholder: "e.g., Ubuntu 22.04, macOS 14.0, Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      description: What Python version are you using?
+      placeholder: "e.g., 3.11.6"
+    validations:
+      required: true
+
+  - type: input
+    id: framework-version
+    attributes:
+      label: MCP Optimizer Version
+      description: What version of MCP Optimizer Framework are you using?
+      placeholder: "e.g., 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: docker-version
+    attributes:
+      label: Docker Version (if applicable)
+      description: If using Docker sandbox, what version?
+      placeholder: "e.g., 24.0.7"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: installation-method
+    attributes:
+      label: Installation Method
+      description: How did you install the framework?
+      options:
+        - pip
+        - source
+        - docker
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: Paste your configuration (remove sensitive data)
+      render: python
+      placeholder: |
+        flags = FeatureFlags(
+            execution_mode=...,
+            enable_sandbox=...,
+            # etc.
+        )
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Output of pip list for key dependencies
+      render: shell
+      placeholder: |
+        aiohttp==3.8.5
+        pydantic==2.4.2
+        structlog==23.1.0
+        docker==6.1.3
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Full Logs
+      description: Include full logs if available
+      render: shell
+      placeholder: Paste full logs here
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem
+      placeholder: Any additional information that might help...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this bug impact your work?
+      options:
+        - Blocks my work completely
+        - Significant impact on functionality
+        - Minor inconvenience
+        - Cosmetic issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this bug occur?
+      options:
+        - Happens every time
+        - Happens intermittently
+        - Happened once
+        - Cannot reproduce consistently
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: security-impact
+    attributes:
+      label: Security Impact
+      description: Does this bug have security implications?
+      options:
+        - label: This bug has security implications (I will also email rhart696@gmail.com)
+        - label: No security implications
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have provided a minimal reproducible example (if possible)
+          required: false
+        - label: I have included all relevant environment information
+          required: true
+        - label: I have checked the documentation
+          required: true
+        - label: I have removed any sensitive information from logs/code
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note**: For security vulnerabilities, please also email rhart696@gmail.com instead of only opening a public issue. See [SECURITY.md](../../SECURITY.md) for details.

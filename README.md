@@ -204,9 +204,18 @@ class CustomAdaptor:
 
 ## Documentation
 
-- [API Reference](docs/API.md)
-- [Security Guide](docs/SECURITY.md)
-- [Migration Guide](docs/MIGRATION.md)
+- [Architecture Guide](docs/ARCHITECTURE.md) - System architecture and design decisions
+- [Performance Benchmarks](docs/PERFORMANCE.md) - Detailed performance analysis and benchmarks
+- [Security Policy](SECURITY.md) - Security best practices and vulnerability reporting
+- [Contributing Guide](CONTRIBUTING.md) - How to contribute to the project
+- [Code of Conduct](CODE_OF_CONDUCT.md) - Community guidelines
+- [Roadmap](ROADMAP.md) - Future plans and feature roadmap
+- [Changelog](CHANGELOG.md) - Version history and changes
+
+### Architecture Decision Records (ADRs)
+
+- [ADR-0001: Code Execution Approach](docs/adr/0001-code-execution-approach.md)
+- [ADR-0002: Docker Sandbox](docs/adr/0002-docker-sandbox.md)
 
 ## License
 

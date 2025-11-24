@@ -1,0 +1,230 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["feature-request", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide as much detail as possible to help us understand your needs.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: Describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: Describe your proposed solution...
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: API Design (if applicable)
+      description: How would you envision using this feature?
+      render: python
+      placeholder: |
+        from mcp_optimizer import NewFeature
+
+        feature = NewFeature(config=...)
+        result = feature.execute()
+    validations:
+      required: false
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Describe specific use cases for this feature
+      placeholder: |
+        1. Use Case 1: Description
+        2. Use Case 2: Description
+        3. Use Case 3: Description
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: What benefits does this feature provide?
+      placeholder: |
+        - Performance: 20% faster execution
+        - Cost: 15% token reduction
+        - Usability: Simpler configuration
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe alternative solutions you've considered
+      placeholder: |
+        ### Alternative 1
+        Description: ...
+        Pros: ...
+        Cons: ...
+        Why not this: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation-thoughts
+    attributes:
+      label: Implementation Thoughts
+      description: Ideas about how to implement this (if any)
+      placeholder: |
+        - Approach: High-level implementation approach
+        - Components Affected: Which parts of the codebase
+        - Dependencies: New dependencies needed
+        - Breaking Changes: Would this break existing APIs?
+        - Complexity: Low/Medium/High
+    validations:
+      required: false
+
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: Would this be backward compatible?
+      options:
+        - Backward compatible
+        - Requires breaking changes
+        - New opt-in feature
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Critical - Blocks my adoption
+        - High - Would significantly improve my workflow
+        - Medium - Nice to have
+        - Low - Future enhancement
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: willingness-to-contribute
+    attributes:
+      label: Willingness to Contribute
+      description: Would you be willing to help?
+      options:
+        - label: I am willing to implement this feature
+        - label: I am willing to help with testing
+        - label: I am willing to help with documentation
+        - label: I need someone else to implement this
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues/PRs
+      description: Link to related issues or pull requests
+      placeholder: |
+        - Related to #...
+        - Depends on #...
+        - Blocks #...
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples from Other Projects
+      description: Similar features in other projects?
+      placeholder: |
+        - Project X: [Link and description]
+        - Project Y: [Link and description]
+    validations:
+      required: false
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How would we know if this feature is successful?
+      placeholder: |
+        - Reduces latency by X%
+        - Improves token efficiency by Y%
+        - Receives positive feedback from N users
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: documentation-needs
+    attributes:
+      label: Documentation Needs
+      description: What documentation would be needed?
+      options:
+        - label: API documentation
+        - label: Tutorial/guide
+        - label: Architecture decision record (ADR)
+        - label: Configuration examples
+        - label: Migration guide (if breaking change)
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline (if applicable)
+      description: When do you need this feature?
+      placeholder: "Needed by: YYYY-MM-DD"
+    validations:
+      required: false
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions for Maintainers
+      description: Any questions you have?
+      placeholder: |
+        1. Question 1
+        2. Question 2
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues and discussions
+          required: true
+        - label: I have clearly described the problem and solution
+          required: true
+        - label: I have considered alternatives
+          required: false
+        - label: I have described the impact and benefits
+          required: true
+        - label: I have checked the ROADMAP.md to see if this is already planned
+          required: true
+        - label: I have reviewed CONTRIBUTING.md
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note**: Popular feature requests (high upvotes 👍) are more likely to be prioritized. Join discussions and share your use case to help us understand demand!
