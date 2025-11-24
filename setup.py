@@ -17,6 +17,10 @@ setup(
         "python-dotenv>=1.0.0",
         "redis>=4.0.0",
         "prometheus-client>=0.15.0",
+        "opentelemetry-api>=1.20.0",
+        "opentelemetry-sdk>=1.20.0",
+        "opentelemetry-exporter-otlp-proto-grpc>=1.20.0",
+        "opentelemetry-exporter-prometheus>=0.59b0",
         "docker>=6.0.0",
     ],
     extras_require={

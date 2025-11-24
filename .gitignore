@@ -58,3 +58,4 @@ Thumbs.db
 .mcp-optimizer/
 *.db
 *.sqlite
+test_venv/

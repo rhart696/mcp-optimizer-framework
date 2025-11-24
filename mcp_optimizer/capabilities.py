@@ -327,3 +327,7 @@ def get_mini_manifest() -> Dict[str, Any]:
     """
     registry = CapabilityRegistry()
     return registry.get_manifest()
+
+
+# Alias for backward compatibility
+CapabilityDetector = CapabilityRegistry

@@ -6,10 +6,12 @@ Addresses critique about insufficient security isolation
 import os
 import sys
 import json
+import time
 import tempfile
 import subprocess
 import hashlib
 import secrets
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional, List, Tuple
 from enum import Enum
@@ -502,3 +504,7 @@ class HardenedExecutor:
                 "GDPR (with DPA)"
             ]
         }
+
+
+# Alias for backward compatibility with __init__.py
+HardenedSandbox = HardenedExecutor

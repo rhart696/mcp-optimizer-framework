@@ -414,3 +414,7 @@ class TelemetrySystem:
                 "compliance": "SOC2 Type 2 compatible logging"
             }
         }
+
+
+# Alias for backward compatibility
+TelemetryCollector = TelemetrySystem
